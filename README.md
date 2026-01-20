@@ -12,7 +12,7 @@ Required Software for this project is:
    - Go to Installed > Modify > Find and click "Desktop development with C++" > Install
 3. Clone this repository [Tutorial Here](https://blog.hubspot.com/website/clone-github-repository)
 <br/><br/>
-4. Open Visual Studio > Click on "Open a project or solution" > Navigate to "solar_system_simulator/Solar System Simulator" > Open SolarSystemSimulator.sln
+4. Open Visual Studio > Click on "Open a project or solution" > Navigate to "solar_system_simulator/Solar System Simulator/src" > Open SolarSystemSimulator.sln
 <br/><br/>
 5. In the Visual Studio taskbar at the top go to: Tools > NuGet Package Manager > Manage NuGet Packages for Solution
 <br/><br/>

@@ -1,0 +1,5 @@
+Required Software for this project is: 
+
+1. Visual Studio
+2. Git
+3. Favorite text editor or IDE (Recommended: Visual Studio)

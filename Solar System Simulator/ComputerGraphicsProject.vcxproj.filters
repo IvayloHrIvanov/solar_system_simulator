@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\textures">
+      <UniqueIdentifier>{c6059315-4b4e-4138-98bc-e600b58fd3b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shaders">
+      <UniqueIdentifier>{a6379418-6950-4a4f-b25a-1fa0a647e8e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ComputerGraphicsProject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CelestialBody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="shaders\planet.fragment">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\planet.vertex">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\star.fragment">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\star.vertex">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\orbit.vertex">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\orbit.fragment">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="background.vertex">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="background.fragment">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\ring.fragment">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="shaders\ring.vertex">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stb_image.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsEngine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CelestialBody.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLoader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\sun.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\earth.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\jupiter.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\mars.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\moon.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\mercury.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\venus.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\saturn.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\saturn_rings.png">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\uranus.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\uranus2.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\neptune.jpg">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

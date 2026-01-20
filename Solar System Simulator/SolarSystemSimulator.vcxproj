@@ -24,6 +24,7 @@
     <ProjectGuid>{0c77e682-ee92-4e39-b54d-b09e6de3a4e5}</ProjectGuid>
     <RootNamespace>ComputerGraphicsProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SolarSystemSimulator</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -130,7 +131,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CelestialBody.cpp" />
-    <ClCompile Include="ComputerGraphicsProject.cpp" />
+    <ClCompile Include="SolarSystemSimulator.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="PhysicsEngine.cpp" />
     <ClCompile Include="Shader.cpp" />

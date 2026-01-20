@@ -20,8 +20,8 @@ using namespace std;
 
 enum OrbitMode {
     ORBITS_OFF = 0,
-    ORBITS_TRAIL = 1,
-    ORBITS_FULL = 2
+    ORBITS_FULL = 1,
+    ORBITS_TRAIL = 2
 };
 
 // Function declarations
@@ -325,7 +325,22 @@ void createOrbitLines() {
         // Generate partial orbit
         if (orbitMode == ORBITS_TRAIL) {
             if (body->orbitPoints.size() < 2) continue;
-            orbitPointsToCreate = body->orbitPoints;
+
+            const int MIN_POINTS = 2000; // Minimum orbit trail distance
+            const int START_POINTS = 100; // Orbit trail start distance
+
+            int totalPoints = body->orbitPoints.size();
+            orbitPointsToCreate.clear();
+
+            int pointsToShow = min(MIN_POINTS, START_POINTS + (int)((totalPoints / (float)MIN_POINTS) * (MIN_POINTS - START_POINTS)));
+            pointsToShow = max(2, pointsToShow);
+
+            for (int i = 0; i < pointsToShow; i++) {
+                float t = (float)i / (pointsToShow - 1);
+                int srcIdx = (int)(t * (totalPoints - 1));
+                srcIdx = min(srcIdx, totalPoints - 1);
+                orbitPointsToCreate.push_back(body->orbitPoints[srcIdx]);
+            }
         }
         else if (orbitMode == ORBITS_FULL) {
             // Planet orbit
@@ -456,19 +471,19 @@ int main() {
     cout << "Loading shaders..." << endl;
 
     try {
-        backgroundShader = new Shader("shaders/background.vertex", "shaders/background.fragment");
+        backgroundShader = new Shader("../shaders/background.vertex", "../shaders/background.fragment");
         cout << "Background shader loaded successfully" << endl;
 
-        starShader = new Shader("shaders/star.vertex", "shaders/star.fragment");
+        starShader = new Shader("../shaders/star.vertex", "../shaders/star.fragment");
         cout << "Star shader loaded successfully" << endl;
 
-        planetShader = new Shader("shaders/planet.vertex", "shaders/planet.fragment");
+        planetShader = new Shader("../shaders/planet.vertex", "../shaders/planet.fragment");
         cout << "Planet shader loaded successfully" << endl;
 
-        orbitShader = new Shader("shaders/orbit.vertex", "shaders/orbit.fragment");
+        orbitShader = new Shader("../shaders/orbit.vertex", "../shaders/orbit.fragment");
         cout << "Orbit shader loaded successfully" << endl;
 
-        ringShader = new Shader("shaders/ring.vertex", "shaders/ring.fragment");
+        ringShader = new Shader("../shaders/ring.vertex", "../shaders/ring.fragment");
         cout << "Ring shader loaded successfully" << endl;
     }
     catch (const exception& e) {
@@ -641,18 +656,18 @@ int main() {
 void loadTextures() {
     cout << "Loading textures..." << endl;
 
-    backgroundTexture = loadTextureFromFile("textures/background.jpg");
-    sunTexture = loadTextureFromFile("textures/sun.jpg");
-    mercuryTexture = loadTextureFromFile("textures/mercury.jpg");
-    venusTexture = loadTextureFromFile("textures/venus.jpg");
-    earthTexture = loadTextureFromFile("textures/earth.jpg");
-    marsTexture = loadTextureFromFile("textures/mars.jpg");
-    jupiterTexture = loadTextureFromFile("textures/jupiter.jpg");
-    saturnTexture = loadTextureFromFile("textures/saturn.jpg");
-    saturnRingsTexture = loadTextureFromFile("textures/saturn_rings.png");
-    uranusTexture = loadTextureFromFile("textures/uranus.jpg");
-    neptuneTexture = loadTextureFromFile("textures/neptune.jpg");
-    moonTexture = loadTextureFromFile("textures/moon.jpg");
+    backgroundTexture = loadTextureFromFile("../textures/background.jpg");
+    sunTexture = loadTextureFromFile("../textures/sun.jpg");
+    mercuryTexture = loadTextureFromFile("../textures/mercury.jpg");
+    venusTexture = loadTextureFromFile("../textures/venus.jpg");
+    earthTexture = loadTextureFromFile("../textures/earth.jpg");
+    marsTexture = loadTextureFromFile("../textures/mars.jpg");
+    jupiterTexture = loadTextureFromFile("../textures/jupiter.jpg");
+    saturnTexture = loadTextureFromFile("../textures/saturn.jpg");
+    saturnRingsTexture = loadTextureFromFile("../textures/saturn_rings.png");
+    uranusTexture = loadTextureFromFile("../textures/uranus.jpg");
+    neptuneTexture = loadTextureFromFile("../textures/neptune.jpg");
+    moonTexture = loadTextureFromFile("../textures/moon.jpg");
 
     cout << "All textures loaded!" << endl;
 }
